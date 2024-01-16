@@ -45,7 +45,6 @@ class AuthFragment : Fragment() {
                 val result: Person? = db.getDao().qetUserByLogin(binding?.edLogin?.text.toString())
 
                 activity?.runOnUiThread() {
-
                     binding?.let { safeBinding ->
                         if (result != null && result.password == binding?.edPassword?.text.toString()) {
 
